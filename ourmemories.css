@@ -37,6 +37,10 @@ body {
   font-weight: 600;
   transition: all 0.2s ease;
   box-sizing: border-box;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .memory-buttons .btn:hover {
@@ -79,7 +83,7 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
   width: 95%;
-  max-width: none;
+  max-width: 450px;
   box-sizing: border-box;
   min-height: auto;
   height: auto;
@@ -89,7 +93,8 @@ body {
   justify-content: flex-start;
   gap: 15px;
   border: 3px solid #cccccc;
-  margin: 10px;
+  margin: 10px auto;
+  overflow: hidden;
 }
 
 .center-box h1 {
@@ -160,22 +165,37 @@ body {
   .center-box {
     padding: 12px 10px;
     margin: 2px;
+    max-width: 100%;
   }
 
   .memory-buttons {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 10px;
-    max-width: 260px;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
   }
 
   .memory-buttons .btn {
     padding: 18px;
     font-size: 1em;
+    aspect-ratio: 4 / 5;
   }
 
   .back-btn {
     padding: clamp(10px, 4vw, 12px) 20px;
     font-size: clamp(0.9em, 3vw, 0.95em);
     min-height: 48px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+  .center-box {
+    padding: 10px 5px;
+    margin: 1px;
+  }
+  .memory-buttons {
+    gap: 8px;
   }
 }
