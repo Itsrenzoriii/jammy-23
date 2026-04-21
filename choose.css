@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   justify-content: center;
   border: 3px solid #cccccc;
+  overflow: hidden;
 }
 
 .center-box h1 {
@@ -72,6 +73,9 @@ body {
   font-weight: 600;
   transition: all 0.2s ease;
   box-sizing: border-box;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 .memory-buttons .btn:hover {
@@ -137,13 +141,15 @@ body {
     min-height: auto;
     height: auto;
     max-height: 95vh;
-    overflow-y: auto;
+    overflow: hidden;
   }
 
   .memory-buttons {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 12px;
-    max-width: 260px;
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
   }
 
   .memory-buttons .btn {
