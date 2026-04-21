@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Memory</title>
+    <link rel="stylesheet" href="ourmemories.css">
+</head>
+<body>
+    <div class="center-box">
+        <h1>MY FAVE!!!</h1>
+        <div class="memory-buttons">
+            <a href="#" class="btn"><img src="images/IMG_20260418_165355_145.jpg" alt="Moment 1" style="width:100%;height:100%;object-fit:cover;border-radius: inherit;display:block;"></a>
+            <a href="#" class="btn"><img src="images/IMG_20260418_165415_588.jpg" alt="Moment 2" style="width:100%;height:100%;object-fit:cover;border-radius: inherit;display:block;"></a>
+            <a href="#" class="btn"><img src="images/IMG_20260418_165422_524.jpg" alt="Moment 3" style="width:100%;height:100%;object-fit:cover;border-radius: inherit;display:block;"></a>
+            <a href="#" class="btn"><img src="images/IMG_20260418_165427_456.jpg" alt="Moment 4" style="width:100%;height:100%;object-fit:cover;border-radius: inherit;display:block;"></a>
+            <a href="#" class="btn"><img src="images/IMG_20260418_165430_727.jpg" alt="Moment 5" style="width:100%;height:100%;object-fit:cover;border-radius: inherit;display:block;"></a>
+            <a href="#" class="btn"><img src="images/IMG_20260418_165454_193.jpg" alt="Moment 6" style="width:100%;height:100%;object-fit:cover;border-radius: inherit;display:block;"></a>
+        </div>
+        <a href="Choose.html" class="back-btn">Back</a>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" style="display:none;">
+        <span class="close" id="closeBtn">&times;</span>
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="modalImg">
+        </div>
+    </div>
+
+    <script src="memory-modal.js" defer></script>
+
+    <style>
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255,105,180,0.5);
+        }
+        .close {
+            position: fixed;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1002;
+            text-shadow: 0 0 5px #ff69b4;
+            font-family: Arial, sans-serif;
+        }
+        .close:hover {
+            color: #ff69b4;
+        }
+
+        .modal-content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            max-width: 90vw;
+            height: 90%;
+            max-height: 90vh;
+        }
+    </style>
+</body>
+</html>

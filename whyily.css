@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Caveat:wght@400;700&family=Satisfy&family=Playfair+Display:wght@400;500&display=swap');
+
+body {
+  background-color: #ffc0cb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.back-btn {
+  background-color: white !important;
+  color: #ff69b4 !important;
+  text-decoration: none;
+  border: 3px solid #ff69b4 !important;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.back-btn:hover {
+  background-color: #fff0f5 !important;
+  color: #ff1493 !important;
+  border-color: #ff1493 !important;
+  transform: translateY(-1px);
+}
+
+.center-box {
+  background: white;
+  padding: clamp(20px, 8vw, 30px);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+  box-sizing: border-box;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid #cccccc;
+}
+
+.center-box h1 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: clamp(2em, 8vw, 3.5em);
+  color: #ff69b4;
+  margin: 0 0 clamp(15px, 5vw, 20px) clamp(20px, 6vw, 30px);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+  text-align: left;
+  align-self: flex-start;
+}
+
+.inner-box {
+  background: white;
+  width: clamp(280px, 85%, 350px);
+  max-width: 95%;
+  height: auto;
+  min-height: 250px;
+  max-height: 50vh;
+  margin: clamp(10px, 4vw, 20px) auto;
+  border: 2.5px dashed #ff69b4;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: clamp(20px, 6vw, 25px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.inner-box::-webkit-scrollbar { 
+  width: 0px; 
+  background: transparent; /* Chrome/Safari */
+}
+
+.inner-box p {
+  font-family: 'Caveat', 'Dancing Script', cursive;
+  font-weight: 400;
+  font-size: clamp(1em, 4.2vw, 1.2em);
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .center-box {
+    padding: clamp(20px, 6vw, 25px);
+    margin: 10px;
+    width: calc(100% - 20px);
+    min-height: 90vh;
+  }
+
+  .inner-box {
+    width: clamp(280px, 85%, 350px);
+    min-height: 220px;
+    max-height: 45vh;
+    padding: clamp(18px, 5vw, 22px);
+  }
+
+  .back-btn {
+    padding: clamp(10px, 4vw, 12px) 20px;
+    font-size: clamp(0.9em, 3vw, 0.95em);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .center-box {
+    padding: clamp(15px, 5vw, 20px);
+    margin: 5px;
+    width: calc(100% - 10px);
+    min-height: auto;
+    height: auto;
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+
+  .inner-box {
+    width: 92%;
+    min-height: 200px;
+    max-height: 50vh;
+    padding: clamp(15px, 4.5vw, 18px);
+    gap: 10px;
+  }
+
+  .back-btn {
+    padding: clamp(10px, 4vw, 12px) 20px;
+    font-size: clamp(0.9em, 3vw, 0.95em);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .inner-box p {
+    font-size: clamp(0.95em, 4vw, 1.1em);
+  }
+}
